@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, Smartphone } from "lucide-react";
 
 export function CTA() {
@@ -57,10 +58,10 @@ export function CTA() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <button className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-2xl hover:scale-105">
+                  <Link href="/restaurants" className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-2xl hover:scale-105">
                     Start Browsing
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                   <button className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-foreground bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200">
                     Learn More
                   </button>

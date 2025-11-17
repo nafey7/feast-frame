@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Utensils } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
@@ -10,12 +11,12 @@ export function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <Utensils className="h-8 w-8 text-orange-500" />
             <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
               FeastFrame
             </span>
-          </div>
+          </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
@@ -42,9 +43,9 @@ export function Header() {
           {/* Actions */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <button className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <Link href="/restaurants" className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
