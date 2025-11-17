@@ -1,0 +1,56 @@
+# Quick Test URLs for FeastFrame UI
+# Copy and paste these URLs into your browser
+# Assuming dev server is running on http://localhost:5173
+
+# Homepage
+http://localhost:5173/
+
+# Restaurant List
+http://localhost:5173/restaurants
+
+# Restaurant Details (all 6 restaurants)
+http://localhost:5173/restaurants/la-bella-italia
+http://localhost:5173/restaurants/dragon-palace
+http://localhost:5173/restaurants/sakura-sushi-bar
+http://localhost:5173/restaurants/taco-fiesta
+http://localhost:5173/restaurants/spice-route
+http://localhost:5173/restaurants/thai-orchid
+
+# Search - Empty
+http://localhost:5173/search
+
+# Search - With Queries
+http://localhost:5173/search?q=pizza
+http://localhost:5173/search?q=Italian
+http://localhost:5173/search?q=sushi
+http://localhost:5173/search?q=Mexican
+http://localhost:5173/search?q=San Francisco
+http://localhost:5173/search?q=Margherita
+
+# About Page
+http://localhost:5173/about
+
+# About Page - How It Works Section
+http://localhost:5173/about#how-it-works
+
+# Featured Restaurants Only
+http://localhost:5173/restaurants?featured=true
+
+# ===================================
+# PATHS ONLY (no base URL)
+# ===================================
+
+/
+/restaurants
+/restaurants/la-bella-italia
+/restaurants/dragon-palace
+/restaurants/sakura-sushi-bar
+/restaurants/taco-fiesta
+/restaurants/spice-route
+/restaurants/thai-orchid
+/search
+/search?q=pizza
+/search?q=Italian
+/search?q=sushi
+/about
+/about#how-it-works
