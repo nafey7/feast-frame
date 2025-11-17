@@ -18,13 +18,13 @@ export function CTA() {
               {/* Left Content */}
               <div className="space-y-6">
                 <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight">
-                  Ready to Start Your
+                  Stop Guessing,
                   <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
-                    {" "}Food Journey?
+                    {" "}Start Seeing
                   </span>
                 </h2>
                 <p className="text-xl text-foreground/70">
-                  Join thousands of happy customers and experience the future of food delivery today.
+                  Join thousands of food lovers who browse dishes visually before dining out.
                 </p>
 
                 {/* Features List */}
@@ -35,7 +35,7 @@ export function CTA() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-foreground/80">No delivery fees for first month</span>
+                    <span className="text-foreground/80">100% free to browse and use</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center flex-shrink-0">
@@ -43,7 +43,7 @@ export function CTA() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-foreground/80">Exclusive deals and promotions</span>
+                    <span className="text-foreground/80">Updated daily with new dishes</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center flex-shrink-0">
@@ -51,14 +51,14 @@ export function CTA() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-foreground/80">24/7 customer support</span>
+                    <span className="text-foreground/80">Save your favorite dishes</span>
                   </div>
                 </div>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <button className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-2xl hover:scale-105">
-                    Get Started Now
+                    Start Browsing
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <button className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-foreground bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200">
@@ -87,9 +87,9 @@ export function CTA() {
 
                   <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-4 animate-slide-up delay-300">
                     <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
-                      500+
+                      5000+
                     </div>
-                    <div className="text-xs text-foreground/60">Restaurants</div>
+                    <div className="text-xs text-foreground/60">Dish Photos</div>
                   </div>
                 </div>
               </div>

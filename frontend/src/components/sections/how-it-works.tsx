@@ -1,31 +1,31 @@
 "use client";
 
 import React from "react";
-import { Search, ShoppingCart, Truck, CheckCircle } from "lucide-react";
+import { Search, Image, Eye, Utensils } from "lucide-react";
 
 const steps = [
   {
     icon: Search,
-    title: "Browse Restaurants",
-    description: "Explore hundreds of restaurants and cuisines in your area.",
+    title: "Find Restaurants",
+    description: "Search for restaurants by location, cuisine, or name.",
     step: "01",
   },
   {
-    icon: ShoppingCart,
-    title: "Place Your Order",
-    description: "Select your favorite dishes and customize as you like.",
+    icon: Image,
+    title: "Browse Dishes",
+    description: "Explore dish menus with beautiful, high-quality photos.",
     step: "02",
   },
   {
-    icon: Truck,
-    title: "Track Delivery",
-    description: "Follow your order in real-time as it makes its way to you.",
+    icon: Eye,
+    title: "View Multiple Photos",
+    description: "Click on any dish to see it from different angles and presentations.",
     step: "03",
   },
   {
-    icon: CheckCircle,
-    title: "Enjoy Your Meal",
-    description: "Receive your hot, fresh food and enjoy your dining experience.",
+    icon: Utensils,
+    title: "Visit & Order",
+    description: "Make an informed decision and visit the restaurant with confidence.",
     step: "04",
   },
 ];
@@ -40,7 +40,7 @@ export function HowItWorks() {
             How It <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">Works</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Getting your favorite food delivered is easier than ever. Just follow these simple steps.
+            Discover what dishes look like before you order. No more surprises, just informed decisions.
           </p>
         </div>
 

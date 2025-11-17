@@ -3,8 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
 export const metadata: Metadata = {
-  title: "FeastFrame - Your Ultimate Food Experience",
-  description: "Discover, order, and enjoy delicious meals from your favorite restaurants",
+  title: "FeastFrame - See Before You Order",
+  description: "Browse restaurant dishes with multiple images. Discover what food looks like before you dine. No more guessing - see every dish from all angles.",
 };
 
 export default function RootLayout({

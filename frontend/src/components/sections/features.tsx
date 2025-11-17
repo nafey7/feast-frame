@@ -1,43 +1,43 @@
 "use client";
 
 import React from "react";
-import { Clock, Shield, Star, Smartphone, CreditCard, MapPin } from "lucide-react";
+import { Image, Search, Eye, Smartphone, Bookmark, MapPin } from "lucide-react";
 
 const features = [
   {
-    icon: Clock,
-    title: "Fast Delivery",
-    description: "Get your food delivered hot and fresh within 30 minutes or it's free.",
+    icon: Image,
+    title: "Multiple Photos Per Dish",
+    description: "View multiple angles and presentations of each dish to make the perfect choice.",
     color: "from-orange-500 to-orange-600",
   },
   {
-    icon: Shield,
-    title: "Safe & Secure",
-    description: "Your data is encrypted and protected with industry-leading security.",
+    icon: Search,
+    title: "Easy Search & Filter",
+    description: "Find dishes by name, cuisine type, or restaurant with our powerful search.",
     color: "from-blue-500 to-blue-600",
   },
   {
-    icon: Star,
-    title: "Top Rated",
-    description: "Only partner with restaurants that maintain a 4+ star rating.",
+    icon: Eye,
+    title: "Visual Discovery",
+    description: "Browse through stunning food photography before deciding what to eat.",
     color: "from-yellow-500 to-yellow-600",
   },
   {
     icon: Smartphone,
-    title: "Easy Ordering",
-    description: "Order with just a few taps through our intuitive mobile-first interface.",
+    title: "Mobile Optimized",
+    description: "Browse dishes seamlessly on any device with our responsive design.",
     color: "from-purple-500 to-purple-600",
   },
   {
-    icon: CreditCard,
-    title: "Multiple Payments",
-    description: "Support for all major payment methods including digital wallets.",
+    icon: Bookmark,
+    title: "Save Favorites",
+    description: "Bookmark your favorite dishes and create collections for future visits.",
     color: "from-green-500 to-green-600",
   },
   {
     icon: MapPin,
-    title: "Real-time Tracking",
-    description: "Track your order in real-time from restaurant to your doorstep.",
+    title: "Location Based",
+    description: "Discover dishes from restaurants near you or explore different areas.",
     color: "from-pink-500 to-pink-600",
   },
 ];
@@ -52,7 +52,7 @@ export function Features() {
             Why Choose <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">FeastFrame?</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            We combine cutting-edge technology with exceptional service to deliver the best food ordering experience.
+            Never wonder what a dish looks like again. Browse, explore, and discover with confidence before you dine.
           </p>
         </div>
 

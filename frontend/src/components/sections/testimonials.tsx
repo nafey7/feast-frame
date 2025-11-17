@@ -9,21 +9,21 @@ const testimonials = [
     role: "Food Enthusiast",
     image: "👩",
     rating: 5,
-    text: "FeastFrame has completely changed how I order food. The delivery is always on time, and the food quality is exceptional!",
+    text: "Finally! No more awkwardly searching Google Images at restaurants. FeastFrame shows me exactly what each dish looks like before I order.",
   },
   {
     name: "Michael Chen",
-    role: "Tech Professional",
+    role: "Food Blogger",
     image: "👨",
     rating: 5,
-    text: "The app is incredibly intuitive and the real-time tracking feature is a game-changer. Highly recommended!",
+    text: "The multiple photos per dish feature is genius! I can see the presentation, portions, and ingredients clearly. Makes dining out so much easier.",
   },
   {
     name: "Emily Rodriguez",
     role: "Student",
     image: "👩",
     rating: 5,
-    text: "As a busy student, FeastFrame is a lifesaver. Great selection of restaurants and amazing customer service.",
+    text: "As someone who's picky about food, being able to browse actual photos before visiting a restaurant has been a game-changer!",
   },
 ];
 
@@ -34,10 +34,10 @@ export function Testimonials() {
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16 animate-slide-up">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground">
-            What Our <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">Customers Say</span>
+            What Our <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">Users Say</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust FeastFrame for their daily food needs.
+            See why food lovers trust FeastFrame to make better dining decisions.
           </p>
         </div>
 

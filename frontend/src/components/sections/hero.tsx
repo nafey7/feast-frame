@@ -27,21 +27,21 @@ export function Hero() {
             {/* Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
-                Delicious Food
+                See Before
               </span>
               <br />
-              <span className="text-foreground">At Your Doorstep</span>
+              <span className="text-foreground">You Order</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-foreground/70 max-w-xl">
-              Discover the best restaurants near you, order your favorite meals, and enjoy a seamless dining experience from the comfort of your home.
+              Browse beautiful images of dishes from restaurants near you. No more guessing what a dish looks like - see multiple photos before you visit.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-2xl hover:scale-105">
-                Order Now
+                Explore Dishes
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-foreground bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200">
@@ -53,16 +53,16 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200 dark:border-gray-800">
               <div>
-                <div className="text-3xl font-bold text-foreground">500+</div>
+                <div className="text-3xl font-bold text-foreground">200+</div>
                 <div className="text-sm text-foreground/60">Restaurants</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-foreground">10k+</div>
-                <div className="text-sm text-foreground/60">Happy Users</div>
+                <div className="text-3xl font-bold text-foreground">5000+</div>
+                <div className="text-sm text-foreground/60">Dish Images</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-foreground">4.9</div>
-                <div className="text-sm text-foreground/60">Rating</div>
+                <div className="text-3xl font-bold text-foreground">50+</div>
+                <div className="text-sm text-foreground/60">Cuisines</div>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ export function Hero() {
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full" />
                   <div>
                     <div className="font-semibold text-foreground">Pizza Margherita</div>
-                    <div className="text-sm text-foreground/60">$12.99</div>
+                    <div className="text-sm text-foreground/60">8 Photos</div>
                   </div>
                 </div>
               </div>
@@ -87,8 +87,8 @@ export function Hero() {
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full" />
                   <div>
-                    <div className="font-semibold text-foreground">Sushi Combo</div>
-                    <div className="text-sm text-foreground/60">$18.99</div>
+                    <div className="font-semibold text-foreground">Sushi Platter</div>
+                    <div className="text-sm text-foreground/60">12 Photos</div>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export function Hero() {
               {/* Center Image Placeholder */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-64 h-64 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center shadow-2xl">
-                  <span className="text-6xl">🍕</span>
+                  <span className="text-6xl">📸</span>
                 </div>
               </div>
             </div>

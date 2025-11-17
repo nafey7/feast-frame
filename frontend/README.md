@@ -1,12 +1,28 @@
 # FeastFrame - Frontend
 
-A modern, responsive food delivery web application built with Next.js 16, React 19, TypeScript, and TailwindCSS.
+A modern, responsive web application for browsing restaurant dishes with images, built with Next.js 16, React 19, TypeScript, and TailwindCSS.
+
+## Business Context
+
+**Problem Statement:**
+When people visit restaurants, they often want to see what a dish looks like before ordering. Currently, they have to search for the dish name on Google Images or Instagram, which is inconvenient and time-consuming.
+
+**Solution:**
+FeastFrame solves this problem by providing a centralized platform where users can:
+- Browse restaurants and their complete dish menus
+- View multiple high-quality images for each dish from different angles
+- Make informed dining decisions before visiting a restaurant
+
+**Note:** This is NOT a food delivery or restaurant reservation app. It's a visual discovery platform for restaurant dishes.
 
 ## Features
 
-- 🎨 Modern UI/UX design with smooth animations
+- 📸 Browse dishes with multiple high-quality images
+- 🔍 Search and filter by restaurant, cuisine, or dish name
+- 👁️ Visual discovery of food before dining
+- 🔖 Save favorite dishes for future reference
 - 🌓 Dark mode support with next-themes
-- 📱 Fully responsive design
+- 📱 Fully responsive design (mobile, tablet, desktop)
 - ⚡ Built with Next.js 16 (App Router)
 - 🎯 TypeScript for type safety
 - 🎨 TailwindCSS for styling
@@ -78,11 +94,11 @@ frontend/
 
 ## Landing Page Sections
 
-1. **Hero Section** - Eye-catching introduction with CTAs and stats
-2. **Features Section** - Key features and benefits
-3. **How It Works** - Step-by-step guide
-4. **Testimonials** - Customer reviews and feedback
-5. **CTA Section** - Final call-to-action with app preview
+1. **Hero Section** - Introduction highlighting visual dish discovery with stats (200+ restaurants, 5000+ dish images, 50+ cuisines)
+2. **Features Section** - Key features including multiple photos per dish, easy search, visual discovery, mobile optimization, bookmarking, and location-based browsing
+3. **How It Works** - 4-step process: Find Restaurants → Browse Dishes → View Multiple Photos → Visit & Order
+4. **Testimonials** - User testimonials about the dish browsing experience
+5. **CTA Section** - Final call-to-action encouraging users to start browsing dishes
 
 ## Technologies Used
 
@@ -109,12 +125,16 @@ The application follows a modular component architecture inspired by best practi
 ## Future Development
 
 This boilerplate is ready for:
-- API integration
-- User authentication
-- Real-time features with Socket.io
+- API integration for restaurants and dishes
+- User authentication and profiles
+- Dish image upload and management
+- Restaurant management dashboard
+- User favorites and collections
+- Advanced search and filtering
+- Location-based restaurant discovery
+- Social features (reviews, ratings, comments)
+- Real-time updates with Socket.io
 - Database models with MongoDB
-- Order management system
-- Restaurant management
 
 ## License
 
