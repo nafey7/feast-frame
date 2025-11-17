@@ -16,7 +16,7 @@ export default function RestaurantsPage() {
   const [viewMode, setViewMode] = useState<ViewMode>("grid");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [location, setLocation] = useState("Your Location");
+  const [location, setLocation] = useState("Pakistan");
   const [sortBy, setSortBy] = useState<SortOption>("rating");
   const [filters, setFilters] = useState({
     cuisines: [] as string[],

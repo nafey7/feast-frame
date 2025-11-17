@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Search, MapPin, SlidersHorizontal } from "lucide-react";
+import { Search, MapPin, SlidersHorizontal, ChevronDown } from "lucide-react";
+import countries from "world-countries";
 
 interface SearchBarProps {
   searchQuery: string;
@@ -18,6 +19,13 @@ export function SearchBar({
   location,
   onLocationChange,
 }: SearchBarProps) {
+  // Sort countries alphabetically by common name
+  const sortedCountries = React.useMemo(() => {
+    return [...countries].sort((a, b) =>
+      a.name.common.localeCompare(b.name.common)
+    );
+  }, []);
+
   return (
     <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-4 border border-gray-100 dark:border-gray-800 animate-slide-down">
       <div className="flex flex-col lg:flex-row gap-4">
@@ -33,16 +41,21 @@ export function SearchBar({
           />
         </div>
 
-        {/* Location Input */}
+        {/* Country Select */}
         <div className="lg:w-64 relative">
-          <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-orange-500" />
-          <input
-            type="text"
-            placeholder="Location"
+          <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-orange-500 pointer-events-none z-10" />
+          <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none z-10" />
+          <select
             value={location}
             onChange={(e) => onLocationChange(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-foreground placeholder-gray-400 transition-all"
-          />
+            className="w-full pl-12 pr-10 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-foreground appearance-none cursor-pointer transition-all"
+          >
+            {sortedCountries.map((country) => (
+              <option key={country.cca3} value={country.name.common}>
+                {country.flag} {country.name.common}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Filter Button */}
