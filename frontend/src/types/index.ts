@@ -25,19 +25,89 @@ export interface User {
   avatar?: string
 }
 
-export interface Recipe {
+// Restaurant & Menu Types
+export interface Location {
+  address: string
+  city: string
+  state: string
+  zipCode: string
+  coordinates?: {
+    lat: number
+    lng: number
+  }
+}
+
+export interface RestaurantHours {
+  day: string
+  open: string
+  close: string
+  closed?: boolean
+}
+
+export interface Restaurant {
   id: string
-  title: string
+  name: string
+  slug: string
   description: string
-  image?: string
-  ingredients: string[]
-  instructions: string[]
-  cookTime: number
-  prepTime: number
-  servings: number
-  author: User
+  coverImage: string
+  thumbnail: string
+  cuisine: string[]
   rating: number
-  reviews: number
+  reviewCount: number
+  priceRange: '$' | '$$' | '$$$' | '$$$$'
+  location: Location
+  phone: string
+  hours: RestaurantHours[]
+  featured: boolean
   createdAt: string
   updatedAt: string
+}
+
+export interface MenuItem {
+  id: string
+  restaurantId: string
+  name: string
+  description: string
+  price: number
+  category: string
+  images: string[]
+  popular?: boolean
+  spicy?: boolean
+  vegetarian?: boolean
+  vegan?: boolean
+  glutenFree?: boolean
+  createdAt: string
+  updatedAt: string
+}
+
+export interface MenuCategory {
+  id: string
+  name: string
+  slug: string
+  description?: string
+  items: MenuItem[]
+}
+
+// Search Types
+export interface SearchFilters {
+  cuisine?: string[]
+  priceRange?: string[]
+  rating?: number
+  location?: string
+  sortBy?: 'rating' | 'distance' | 'popularity' | 'name'
+}
+
+export interface SearchResult {
+  restaurants: Restaurant[]
+  dishes: MenuItem[]
+  total: number
+}
+
+// Gallery Types
+export interface GalleryImage {
+  id: string
+  url: string
+  alt: string
+  dishName?: string
+  restaurantName?: string
 }
