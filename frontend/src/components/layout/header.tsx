@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Utensils } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
+  const pathname = usePathname();
+  const isLandingPage = pathname === "/";
+
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,9 +46,11 @@ export function Header() {
           {/* Actions */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <Link href="/restaurants" className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
-              Get Started
-            </Link>
+            {isLandingPage && (
+              <Link href="/restaurants" className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+                Get Started
+              </Link>
+            )}
           </div>
         </div>
       </nav>

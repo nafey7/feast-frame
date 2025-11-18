@@ -10,7 +10,6 @@ export interface Restaurant {
   priceRange: string;
   deliveryTime: string;
   photoCount: number;
-  tags: string[];
   isNew?: boolean;
   isFeatured?: boolean;
 }

@@ -9,15 +9,18 @@ interface RestaurantCardProps {
   viewMode?: "grid" | "list";
 }
 
-export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCardProps) {
+export function RestaurantCard({
+  restaurant,
+  viewMode = "grid",
+}: RestaurantCardProps) {
   const [isFavorite, setIsFavorite] = React.useState(false);
 
   if (viewMode === "list") {
     return (
-      <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 animate-fade-in">
-        <div className="flex flex-col md:flex-row">
+      <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 animate-fade-in h-60">
+        <div className="flex flex-col md:flex-row h-full">
           {/* Image Section */}
-          <div className="relative md:w-1/3 h-64 md:h-auto overflow-hidden">
+          <div className="relative md:w-1/3 h-60 md:h-full overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-pink-500/20 z-10" />
             <img
               src={restaurant.imageUrl}
@@ -48,7 +51,9 @@ export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCard
             >
               <Heart
                 className={`w-5 h-5 ${
-                  isFavorite ? "fill-red-500 text-red-500" : "text-gray-600 dark:text-gray-400"
+                  isFavorite
+                    ? "fill-red-500 text-red-500"
+                    : "text-gray-600 dark:text-gray-400"
                 }`}
               />
             </button>
@@ -60,7 +65,7 @@ export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCard
           </div>
 
           {/* Content Section */}
-          <div className="md:w-2/3 p-6 flex flex-col justify-between">
+          <div className="md:w-2/3 p-4 flex flex-col justify-between">
             <div>
               <div className="flex items-start justify-between mb-2">
                 <h3 className="text-2xl font-bold text-foreground group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-pink-500 group-hover:bg-clip-text transition-all">
@@ -68,12 +73,12 @@ export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCard
                 </h3>
               </div>
 
-              <p className="text-foreground/70 mb-4 line-clamp-2">
+              <p className="text-foreground/70 mb-2 line-clamp-1 text-sm">
                 {restaurant.description}
               </p>
 
               {/* Info Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-2 gap-2 mb-2 text-xs">
                 <div className="flex items-center text-sm text-foreground/60">
                   <MapPin className="w-4 h-4 mr-2 text-orange-500" />
                   <span className="truncate">{restaurant.location}</span>
@@ -88,30 +93,19 @@ export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCard
                 </div>
                 <div className="flex items-center text-sm">
                   <Star className="w-4 h-4 mr-1 fill-yellow-400 text-yellow-400" />
-                  <span className="font-semibold text-foreground">{restaurant.rating}</span>
-                  <span className="text-foreground/60 ml-1">({restaurant.reviews})</span>
-                </div>
-              </div>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {restaurant.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-foreground/80 rounded-full text-xs font-medium"
-                  >
-                    {tag}
+                  <span className="font-semibold text-foreground">
+                    {restaurant.rating}
                   </span>
-                ))}
+                  <span className="text-foreground/60 ml-1">
+                    ({restaurant.reviews})
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* Price and Button */}
-            <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-              <div className="text-2xl font-bold text-foreground">
-                {restaurant.priceRange}
-              </div>
-              <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-xl font-medium hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
+            {/* Button */}
+            <div className="flex items-center justify-end mt-2 pt-2 border-t border-gray-200 dark:border-gray-800 gap-2">
+              <button className="px-3 py-1 text-xs bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-lg font-medium hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap">
                 View Menu
               </button>
             </div>
@@ -156,7 +150,9 @@ export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCard
         >
           <Heart
             className={`w-5 h-5 ${
-              isFavorite ? "fill-red-500 text-red-500" : "text-gray-600 dark:text-gray-400"
+              isFavorite
+                ? "fill-red-500 text-red-500"
+                : "text-gray-600 dark:text-gray-400"
             }`}
           />
         </button>
@@ -196,29 +192,18 @@ export function RestaurantCard({ restaurant, viewMode = "grid" }: RestaurantCard
             </div>
             <div className="flex items-center">
               <Star className="w-4 h-4 mr-1 fill-yellow-400 text-yellow-400" />
-              <span className="font-semibold text-foreground">{restaurant.rating}</span>
-              <span className="text-foreground/60 ml-1">({restaurant.reviews})</span>
+              <span className="font-semibold text-foreground">
+                {restaurant.rating}
+              </span>
+              <span className="text-foreground/60 ml-1">
+                ({restaurant.reviews})
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {restaurant.tags.slice(0, 3).map((tag, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-foreground/80 rounded-full text-xs font-medium"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* Price and Button */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-800">
-          <div className="text-xl font-bold text-foreground">
-            {restaurant.priceRange}
-          </div>
+        {/* Button */}
+        <div className="flex items-center justify-end pt-4 border-t border-gray-200 dark:border-gray-800">
           <button className="px-4 py-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-xl text-sm font-medium hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
             View Menu
           </button>
