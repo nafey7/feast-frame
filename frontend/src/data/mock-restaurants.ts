@@ -1,0 +1,226 @@
+import { Restaurant } from "@/types/restaurant";
+
+export const mockRestaurants: Restaurant[] = [
+  {
+    id: "1",
+    name: "Bella Italia",
+    description:
+      "Authentic Italian cuisine with a modern twist. Family recipes passed down through generations.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    cuisine: "Italian",
+    location: "Downtown, 2.5 km",
+    rating: 4.8,
+    reviews: 324,
+    priceRange: "$$",
+    deliveryTime: "25-35 min",
+    photoCount: 127,
+    isNew: false,
+    isFeatured: true,
+  },
+  {
+    id: "2",
+    name: "Sushi Paradise",
+    description:
+      "Premium sushi and Japanese delicacies crafted by master chefs with 20 years of experience.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&q=80",
+    cuisine: "Japanese",
+    location: "Midtown, 1.8 km",
+    rating: 4.9,
+    reviews: 512,
+    priceRange: "$$$",
+    deliveryTime: "30-40 min",
+    photoCount: 203,
+    isNew: false,
+    isFeatured: true,
+  },
+  {
+    id: "3",
+    name: "Taco Fiesta",
+    description:
+      "Vibrant Mexican street food with bold flavors and fresh ingredients sourced daily.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80",
+    cuisine: "Mexican",
+    location: "East Side, 3.2 km",
+    rating: 4.6,
+    reviews: 289,
+    priceRange: "$",
+    deliveryTime: "20-30 min",
+    photoCount: 95,
+    isNew: true,
+    isFeatured: false,
+  },
+  {
+    id: "4",
+    name: "Le Petit Bistro",
+    description:
+      "Elegant French dining experience with seasonal menus and exquisite wine pairings.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    cuisine: "French",
+    location: "West End, 4.1 km",
+    rating: 4.7,
+    reviews: 198,
+    priceRange: "$$$$",
+    deliveryTime: "40-50 min",
+    photoCount: 156,
+    isNew: false,
+    isFeatured: false,
+  },
+  {
+    id: "5",
+    name: "Dragon Wok",
+    description:
+      "Spicy Szechuan and Cantonese classics that bring the flavors of China to your table.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=80",
+    cuisine: "Chinese",
+    location: "Chinatown, 2.1 km",
+    rating: 4.5,
+    reviews: 421,
+    priceRange: "$$",
+    deliveryTime: "25-35 min",
+    photoCount: 178,
+    isNew: false,
+    isFeatured: true,
+  },
+  {
+    id: "6",
+    name: "The Burger Joint",
+    description:
+      "Gourmet burgers made with locally sourced beef and creative toppings that redefine comfort food.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80",
+    cuisine: "American",
+    location: "City Center, 1.5 km",
+    rating: 4.7,
+    reviews: 634,
+    priceRange: "$$",
+    deliveryTime: "15-25 min",
+    photoCount: 89,
+    isNew: true,
+    isFeatured: false,
+  },
+  {
+    id: "7",
+    name: "Spice Route",
+    description:
+      "Aromatic Indian curries and tandoori specialties that take you on a journey through India.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80",
+    cuisine: "Indian",
+    location: "North District, 3.8 km",
+    rating: 4.8,
+    reviews: 367,
+    priceRange: "$$",
+    deliveryTime: "30-40 min",
+    photoCount: 142,
+    isNew: false,
+    isFeatured: false,
+  },
+  {
+    id: "8",
+    name: "Mediterranean Breeze",
+    description:
+      "Fresh and healthy Mediterranean cuisine featuring Greek, Turkish, and Lebanese influences.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+    cuisine: "Mediterranean",
+    location: "Harbor View, 5.2 km",
+    rating: 4.6,
+    reviews: 245,
+    priceRange: "$$$",
+    deliveryTime: "35-45 min",
+    photoCount: 118,
+    isNew: true,
+    isFeatured: true,
+  },
+  {
+    id: "9",
+    name: "Seoul Kitchen",
+    description:
+      "Authentic Korean BBQ and traditional dishes in a modern, vibrant setting.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1580554530778-ca36943938b2?w=800&q=80",
+    cuisine: "Korean",
+    location: "K-Town, 2.7 km",
+    rating: 4.9,
+    reviews: 489,
+    priceRange: "$$",
+    deliveryTime: "25-35 min",
+    photoCount: 201,
+    isNew: false,
+    isFeatured: true,
+  },
+  {
+    id: "10",
+    name: "Green Garden",
+    description:
+      "Plant-based paradise offering creative vegan and vegetarian dishes that even meat-lovers enjoy.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
+    cuisine: "Vegan",
+    location: "Eco District, 3.5 km",
+    rating: 4.7,
+    reviews: 312,
+    priceRange: "$$",
+    deliveryTime: "20-30 min",
+    photoCount: 164,
+    isNew: true,
+    isFeatured: false,
+  },
+  {
+    id: "11",
+    name: "The Steakhouse",
+    description:
+      "Premium cuts of beef aged to perfection and grilled over open flames for maximum flavor.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80",
+    cuisine: "Steakhouse",
+    location: "Financial District, 2.9 km",
+    rating: 4.8,
+    reviews: 456,
+    priceRange: "$$$$",
+    deliveryTime: "35-45 min",
+    photoCount: 134,
+    isNew: false,
+    isFeatured: false,
+  },
+  {
+    id: "12",
+    name: "Pho & Co",
+    description:
+      "Authentic Vietnamese pho and street food with recipes from Hanoi and Saigon.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80",
+    cuisine: "Vietnamese",
+    location: "Little Saigon, 4.3 km",
+    rating: 4.6,
+    reviews: 278,
+    priceRange: "$",
+    deliveryTime: "20-30 min",
+    photoCount: 87,
+    isNew: false,
+    isFeatured: false,
+  },
+];
+
+export const filterOptions = {
+  cuisines: [
+    "Italian",
+    "Japanese",
+    "Mexican",
+    "French",
+    "Chinese",
+    "American",
+    "Korean",
+    "Vegan",
+    "Thai",
+    "Spanish",
+  ],
+  priceRanges: ["$", "$$", "$$$", "$$$$"],
+  ratings: [4.5, 4.0, 3.5, 3.0],
+  features: ["Takeout Available"],
+};
