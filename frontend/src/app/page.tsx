@@ -5,6 +5,7 @@ import { Features } from "@/components/sections/features";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
+import { OwnerCTA } from "@/components/sections/owner-cta";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <HowItWorks />
       <Testimonials />
       <CTA />
+      <OwnerCTA />
       <Footer />
     </main>
   );

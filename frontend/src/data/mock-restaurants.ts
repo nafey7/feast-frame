@@ -1,5 +1,10 @@
 import { Restaurant } from "@/types/restaurant";
 
+/**
+ * @deprecated This mock data is no longer used for restaurant pages.
+ * The application now fetches real data from the API.
+ * This file is kept only for the filterOptions export used by the SearchBar component.
+ */
 export const mockRestaurants: Restaurant[] = [
   {
     id: "1",

@@ -47,9 +47,14 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             {isLandingPage && (
-              <Link href="/restaurants" className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
-                Get Started
-              </Link>
+              <>
+                <Link href="/signup" className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-foreground hover:text-orange-500 transition-colors mr-2">
+                  Partner with us
+                </Link>
+                <Link href="/restaurants" className="hidden sm:inline-flex px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+                  Get Started
+                </Link>
+              </>
             )}
           </div>
         </div>

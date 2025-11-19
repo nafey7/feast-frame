@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Browse restaurant dishes with multiple images. Discover what food looks like before you dine. No more guessing - see every dish from all angles.",
 };
 
+import { AuthProvider } from "@/context/auth-context";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +23,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <AuthProvider>
+            {children}
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
