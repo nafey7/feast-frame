@@ -1,4 +1,5 @@
 from typing import Any, List
+import traceback
 from fastapi import APIRouter, Depends, HTTPException, status
 from motor.motor_asyncio import AsyncIOMotorClient
 from bson import ObjectId
@@ -27,6 +28,63 @@ async def read_restaurants(
     """
     restaurants = await db.restaurants.find().skip(skip).limit(limit).to_list(limit)
     return [RestaurantResponse.from_db(r) for r in restaurants]
+
+# Owner-specific endpoints - MUST be defined before /{restaurant_id} route
+@router.get("/my-restaurants", response_model=List[RestaurantResponse])
+async def get_my_restaurants(
+    db: AsyncIOMotorClient = Depends(deps.get_db),
+    current_user: User = Depends(deps.get_current_user)
+) -> Any:
+    """
+    Get all restaurants owned by the current user.
+    """
+    try:
+        # Ensure owner_id is compared as ObjectId
+        owner_id = current_user.id
+        if owner_id is None:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="User ID is missing"
+            )
+        
+        # Convert to ObjectId if needed
+        if isinstance(owner_id, str):
+            try:
+                owner_id = ObjectId(owner_id)
+            except Exception:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail=f"Invalid user ID format: {owner_id}"
+                )
+        
+        # Query restaurants owned by this user
+        # Try both ObjectId and string comparison to handle different storage formats
+        restaurants_cursor = db.restaurants.find({"owner_id": owner_id})
+        restaurants = await restaurants_cursor.to_list(100)
+        
+        # Convert each restaurant document to response format
+        result = []
+        for r in restaurants:
+            try:
+                result.append(RestaurantResponse.from_db(r))
+            except Exception as e:
+                # Log the error but continue processing other restaurants
+                print(f"Error converting restaurant {r.get('_id')}: {e}")
+                print(traceback.format_exc())
+                continue
+        
+        return result
+    except HTTPException:
+        # Re-raise HTTP exceptions as-is
+        raise
+    except Exception as e:
+        # Log full traceback for debugging
+        print(f"Error in get_my_restaurants: {e}")
+        print(traceback.format_exc())
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to retrieve restaurants: {str(e)}"
+        )
 
 @router.get("/{restaurant_id}", response_model=RestaurantResponse)
 async def read_restaurant(
@@ -77,21 +135,6 @@ async def read_menu_item(
         )
         
     return MenuItemResponse(**target_item)
-
-# Owner-specific endpoints
-
-@router.get("/my-restaurants", response_model=List[RestaurantResponse])
-async def get_my_restaurants(
-    db: AsyncIOMotorClient = Depends(deps.get_db),
-    current_user: User = Depends(deps.get_current_user)
-) -> Any:
-    """
-    Get all restaurants owned by the current user.
-    """
-    restaurants = await db.restaurants.find(
-        {"owner_id": current_user.id}
-    ).to_list(100)
-    return [RestaurantResponse.from_db(r) for r in restaurants]
 
 @router.put("/{restaurant_id}", response_model=RestaurantResponse)
 async def update_restaurant(

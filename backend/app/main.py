@@ -19,14 +19,15 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title="Feast Frame API", lifespan=lifespan)
 
 # Set all CORS enabled origins
-if settings.BACKEND_CORS_ORIGINS:
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=[str(origin) for origin in settings.BACKEND_CORS_ORIGINS],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+# Use configured origins or default to localhost:3000 for development
+cors_origins = settings.BACKEND_CORS_ORIGINS if len(settings.BACKEND_CORS_ORIGINS) > 0 else ["http://localhost:3000", "http://localhost:3001"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[str(origin) for origin in cors_origins],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(api_router, prefix="/api/v1")
 
